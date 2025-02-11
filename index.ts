@@ -11,7 +11,7 @@ async function chat(prompt: string) {
     messages: [{ role: "user", content: prompt }],
   });
 
-  return completion.choices[0].message.tool_calls;
+  return completion.choices[0].message.content;
 }
 
 chat("What is the weather in Baltimore?").then(console.log);
